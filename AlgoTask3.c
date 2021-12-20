@@ -16,25 +16,32 @@ int valueOfChar(char c)
 void Gematria_Sequences(char word[], char text[]){
     int i = 0; 
     int temp_sum = 0; 
+    // getting sum value
     while(word[i]){
         temp_sum += val(word[i]);
         i++;
     } 
-    char str_arr[TXT] = "", *start, *str_ptr;
+    // initialising text and pointers
+    char ans[TXT] = "", *start, *str_ptr;
     start = text;
+    // ans_ptr = ans;
     int sum_word = 0;
     i = 1;
+    // loop untill begin gets to the end
     while(*start){
         char str[TXT] = "";
         str_ptr = str;
+        // copy into helper one char from begin
         strncpy(str, start, i);
         str_ptr = str;
+        // of gimatira == 0 then move the pointer
         if(!val(str[0])){
             start++;
         }
         else{
+            // run untill the end of helper and calculaet the sum
             while(*str_ptr){
-                sum_word += val(*str_ptr);
+                sum_word+= val(*str_ptr);
                 ++str_ptr;
             }
             if( i > strlen(start)){
@@ -51,17 +58,19 @@ void Gematria_Sequences(char word[], char text[]){
                 i = 1; 
             }
             else{
-                strcat(str_arr, str);
-                int len = strlen(str_arr);
-                str_arr[len] = '~';
+                // if sum is equal to word sum add it to ans
+                strcat(ans, str);
+                int len = strlen(ans);
+                ans[len] = '~';
                 sum_word = 0;
                 start++;
                 i = 1;
             }
         }
     }
-    str[strlen(str_arr)-1] = '\0';
-    printf("Gematria Sequences: %s\n", str_arr);
+  // return printed ans
+    ans[strlen(ans)-1] = '\0';
+    printf("Gematria Sequences: %s\n", ans);
 }
 
 void Anagram_Sequences(char *text, char *word)
