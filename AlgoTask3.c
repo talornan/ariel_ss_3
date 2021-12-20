@@ -111,14 +111,14 @@ void Anagram_Sequences(char *text, char *word)
                 }
                 if (*small_loop == ' ')
                 {
-                    //printf("2");
+                  
                     anagram_word[anagram_index] = *small_loop;
                     anagram_index++;
                     small_loop++;
                 }
                 else
                 {
-                    //printf("3");
+               
                     anagram_word[anagram_index] = *small_loop;
                     anagram_index++;
                     copy_ascii[(int)*small_loop] -= 1;
@@ -128,7 +128,7 @@ void Anagram_Sequences(char *text, char *word)
             }
             if (text_counter == word_lenght)
             {
-                //printf("4");
+                
                 if (flag)
                     printf("~");
                 printf("%s", anagram_word);
@@ -138,7 +138,6 @@ void Anagram_Sequences(char *text, char *word)
         }
         else
         {
-            //printf("5");
             big_loop++;
         }
     }
