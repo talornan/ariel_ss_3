@@ -31,7 +31,7 @@ int main()
    
     Gematria_Sequences(word, text);
     //atbash
-	printf("Atbash Sequences: ");
+	printf("Atbash Sequences :  ");
 	//reverse the word
 	i=0;
 	int word_len=0;
