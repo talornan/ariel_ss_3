@@ -70,12 +70,12 @@ void Gematria_Sequences(char word[], char text[]){
     }
   // return printed ans
     ans[strlen(ans)-1] = '\0';
-    printf("Gematria Sequences :  %s\n", ans);
+    printf("Gematria Sequences: %s\n", ans);
 }
 
 void Anagram_Sequences(char *text, char *word)
 {
-    printf("Anagram Sequences :  ");
+    printf("Anagram Sequences: ");
     char *big_loop = (char *)malloc((sizeof(char) * TXT) + 1);
     char *temp_word = (char *)malloc((sizeof(char) * WORD) + 1);
     char *small_loop = (char *)malloc((sizeof(char) * TXT) + 1);
