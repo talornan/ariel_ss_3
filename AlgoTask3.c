@@ -20,7 +20,7 @@ void Gematria_Sequences(char word[], char text[]){
         temp_sum += val(word[i]);
         i++;
     } 
-    char str[TXT] = "", *start, *str_ptr;
+    char str_arr[TXT] = "", *start, *str_ptr;
     start = text;
     int sum_word = 0;
     i = 1;
@@ -51,17 +51,17 @@ void Gematria_Sequences(char word[], char text[]){
                 i = 1; 
             }
             else{
-                strcat(str, str);
-                int len = strlen(str);
-                str[len] = '~';
+                strcat(str_arr, str);
+                int len = strlen(str_arr);
+                str_arr[len] = '~';
                 sum_word = 0;
                 start++;
                 i = 1;
             }
         }
     }
-    str[strlen(str)-1] = '\0';
-    printf("Gematria Sequences: %s\n", str);
+    str[strlen(str_arr)-1] = '\0';
+    printf("Gematria Sequences: %s\n", str_arr);
 }
 
 void Anagram_Sequences(char *text, char *word)
