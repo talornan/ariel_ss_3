@@ -150,7 +150,6 @@ void Anagram_Sequences(char *text, char *word)
             big_loop++;
         }
     }
-  printf("\n");
 }
 
      
